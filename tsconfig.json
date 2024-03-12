@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node10", //https://github.com/rollup/plugins/issues/1329
+    "esModuleInterop": true,
+    "strict": true,
+  }
+}
