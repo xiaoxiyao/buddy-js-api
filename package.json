@@ -1,17 +1,40 @@
 {
   "name": "buddy-js-api",
   "version": "0.1.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Buddy Api JavaScript Wrapper",
+  "main": "dist/bundle.js",
+  "type": "module",
+  "module": "dist/bundle.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    "require": {
+      "types": "./dist/index.d.cts",
+      "default": "./dist/bundle.cjs"
+    },
+    "import": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/bundle.js"
+    },
+    "default": "./dist/bundle.js"
+  },
   "scripts": {
     "test": "jest",
     "lint": "eslint",
     "build": "rollup --config rollup.config.ts --configPlugin typescript",
     "preinstall": "npx only-allow pnpm"
   },
-  "keywords": [],
+  "keywords": [
+    "buddy",
+    "api",
+    "ci"
+  ],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
+  "repository": "https://github.com/xiaoxiyao/buddy-js-api",
+  "bugs": "https://github.com/xiaoxiyao/buddy-js-api/issues",
   "devDependencies": {
     "@jest/globals": "^29.7.0",
     "@rollup/plugin-typescript": "^11.1.6",
